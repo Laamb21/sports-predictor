@@ -23,7 +23,7 @@ for game in live_upcoming_games:
         home_score = boxscore['teams']['home']['teamStats']['batting'].get('runs', 'N/A')
         away_score = boxscore['teams']['away']['teamStats']['batting'].get('runs', 'N/A')
 
-        print(f"{away_team} {away_score} - {home_team} {home_score} (Inning: {inning}, Status: {status})")
+        print(f"{away_team} {away_score} - {home_team} {home_score} (Inning: {inning}, Status: {status})\n")
 
     except Exception as e:
         print(f"Failed to fetch game data for {away_team} vs {home_team}: {e}")
