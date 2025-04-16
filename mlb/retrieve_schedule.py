@@ -28,7 +28,9 @@ def get_mlb_schedule(date_str=None):
             timezone = 'US/Eastern'  # Define a default timezone
             local_time = game_time_utc.replace(tzinfo=pytz.utc).astimezone(pytz.timezone(timezone))
             formatted_time = local_time.strftime('%I:%M %p %Z')
-            print(f"{game['away_name']} at {game['home_name']} - {formatted_time}\n")
+            away_pitcher = game.get('away_probable_pitcher')
+            home_pitcher = game.get('home_probable_pitcher')
+            print(f"{game['away_name']} ({away_pitcher}) at {game['home_name']} ({home_pitcher}) - {formatted_time}\n")
 
         return schedule
     
