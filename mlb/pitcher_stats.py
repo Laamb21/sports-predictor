@@ -24,6 +24,8 @@ def get_pitcher_stats(pitcher_name):
         'Games Started': stats.get('gamesStarted')
     }
 
+'''
 # Example Usage:
 stats = get_pitcher_stats("Corbin Burnes")
 print(stats)
+'''
