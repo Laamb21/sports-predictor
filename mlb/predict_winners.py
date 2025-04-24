@@ -24,7 +24,7 @@ def score_team(team_stats, pitcher_stats, opponent_pitcher_era):
     return round(score, 2)
 
 if __name__ == "__main__":
-    target_dates = ['04/18/2025']
+    target_dates = ['04/24/2025']
     games = get_games_for_dates(target_dates)
     features = build_game_features(games)
 
